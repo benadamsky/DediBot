@@ -1,0 +1,11 @@
+{
+  "name": "dedibot",
+  "version": "1.0.0",
+  "description": "DediFire Official Bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "node bot.js"
+  },
+  "author": "DediFire",
+  "license": "ISC"
+}
