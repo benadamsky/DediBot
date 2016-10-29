@@ -1,4 +1,11 @@
 # DiscordBot
-Discord Bot based on the DediFire Discord Bot found here: https://github.com/BenAdamsky/DediBot
+Discord Bot for the DediFire Discord.
 
-## to be edited and stuff
+## Requirements
+
+[nodejs](<https://nodejs.org>)
+[discord.io](<https://github.com/izy521/discord.io>)
+
+## Setup and Configuration
+
+to be documented
