@@ -6,6 +6,6 @@
   "scripts": {
     "test": "node bot.js"
   },
-  "author": "DediFire",
+  "author": "Ben Adamsky",
   "license": "ISC"
 }
