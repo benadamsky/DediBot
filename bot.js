@@ -5,6 +5,8 @@ var bot = new Discord.Client({
     autorun: true
 });
 
+var evalers = ['150441161088040960']
+
 /*Event area*/
 function cb(err, res) {
     console.log("ERR", err);
@@ -51,6 +53,20 @@ bot.on("message", function(user, userID, channelID, message, event) {
             }, 6000);
         });
         sendMessages(userID, ["\n```md\n\n#DediBot Commands\n[ !website ]( View DediFire's official website )\n[ !members ]( View member count on the Discord ) \n\n#Important Links\n[ Knowledgebase ]( https://www.dedifire.com/client-area/knowledgebase.php )\n[ Game Servers ]( https://www.dedifire.com/game-servers/ )\n[ Dedicated Servers ]( https://www.dedifire.com/dedicated-servers/ )\n[ Partners ]( https://www.dedifire.com/partnerships/ )\n[ Meet the Team ]( https://www.dedifire.com/meet-the-team/ )\n[ Network Status ]( https://www.dedifire.com/client-area/serverstatus.php )\n\n#Social Media\n[ Twitter ]( https://twitter.com/dedifirehosting/ )\n[ Facebook ]( https://www.facebook.com/DediFire/ )\n[ YouTube ]( https://www.youtube.com/channel/UCjvdESt3NUCf3w83a5DYgww/ )\n[ Discord Invite Link ]( https://discordapp.com/invite/Ahwk66u )\n```"]); //DediFire help menu
+    } else if (message.indexOf('!eval') === 0 && evalers.indexOf(userID) > -1) {
+        let step = message.split(' ');
+        let evalContent = step.shift().join(' ');
+        try {
+            bot.sendMessage({
+                to: channelID,
+                message: "```\n" + eval(evalContent) + "\n```"
+            })
+        } catch (e) {
+            bot.sendMessage({
+                to: channelID,
+                message: "```\n" + e + "\n```"
+            })           
+        }
     }
 });
 
