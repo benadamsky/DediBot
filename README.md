@@ -9,4 +9,4 @@ Discord Bot for the DediFire Discord.
 
 ## Setup and Configuration
 
-to be documented
+JavaScript file ran through node.js. Node modules are required to run program. DediBot also requires a Discord bot be set up to create the Bot object.
